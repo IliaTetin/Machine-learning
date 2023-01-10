@@ -16,8 +16,8 @@ class MyLinearRegression:
         X = np.array(X)
         y = np.array(y)
         ones = np.ones(X_train.shape[0])
-        X = np.hstack((ones.reshape(-1,1), X_train))
-        self.coef_ = np.dot((np.linalg.inv(np.dot(X.T,X))), np.dot(X.T,y))
+        X = np.hstack((ones.reshape(-1, 1), X_train))
+        self.coef_ = np.dot((np.linalg.inv(np.dot(X.T, X))), np.dot(X.T, y))
         self.intercept_ = self.coef_[0]
         
         self.coef_ = self.coef_[1:]
